@@ -1,0 +1,61 @@
+<html>
+<head  lang="en">
+    <title> Formulaire </title>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="ram.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker();
+        } );
+    </script>
+</head>
+<body>
+<script src="form.js"></script>
+
+
+<form name="formulaire" action="" method="post" onSubmit="return verif_formulaire()">
+    <fieldset class="ram">
+<pre>
+    <h2 id="ramtitre">Acheter un billet</h2>
+    <h3 id="ramsoustitre">Informations personnelles</h3>
+ <label class="nom">Nom*:     <input type="text" size="25" name="nom" class="lab1"></label><br />
+  <label class="prenom"> Prenom*:
+      <input type="text" size="25" name="prenom" class="lab2">
+   </label><br />
+<label class="courriel">Courriel*:
+    <input type="text" size="25" name="courriel" class="lab3"></label><br />
+    <label class="tel">Telephone:  <input type="text" size="25" name="tel" class="lab4"></label><br />
+<label class="adresse">Adresse*:  <input type="text" size="25" name="lieu" class="lab5"></label><br />
+
+<label class="debut">Date de debut du forfait*:<input type="text" name="date" size="25" id="datepicker"></label><br />
+<label class="par">Nombre de participants:  <input type="text" size="25" name="part" class="lab7"></label><br />
+   <label>Nombre d'animaux de compagnie:  <input type="text" size="25" name="pet" class="lab8"></label><br />
+</pre>
+
+
+
+
+    <div id="tableau">
+        <h4 class="recap"> Recapitulatif de votre forfait</h4>
+
+    </div>
+<span>
+
+<label >
+    <a href="go.html"><input type="submit" id="bouton1" value="Envoyer"></a>
+    <input type="reset" id="bouton2"  value="Reinitialiser"></label>
+</span>
+    </fieldset>
+
+</form>
+
+
+</body>
+</html>
