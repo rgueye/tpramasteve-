@@ -75,12 +75,6 @@ ul.tab li a {
     transition: 0.3s;
     font-size: 17px;
 }
-
-ul.tab li a:hover {
-    background-color: white;
-    color: black;
-}
-
 #croissiere,
 #hiver,
 #nature {
