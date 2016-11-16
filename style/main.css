@@ -43,6 +43,9 @@ ul.tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: dodgerblue;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 5px;
 }
 
 /* faire flotter la liste */
@@ -59,11 +62,13 @@ ul.tab li a {
     font-size: 17px;
 }
 ul.tab li a:hover {
-    background-color: #ddd;
+    background-color: white;
+    color: black;
 }
 /* table active */
 ul.tab li a:focus, .active {
-    background-color: #ccc;
+    background-color: navy;
+    border-radius: 5px;
 }
 
 /* Style the tab content */
