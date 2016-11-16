@@ -1,41 +1,49 @@
-*{
-	font-family: 'Ubuntu Mono', monospace;
-	text-decoration: none;
-/*	background-color: whitesmoke;*/
-}
-a{
-	color : #008197;
-	transition: .2s;
-	padding: 5px;
+* {
+    font-family: 'Ubuntu Mono', monospace;
+    text-decoration: none;
+    /*	background-color: whitesmoke;*/
 }
 
+a {
+    color: #008197;
+    transition: .2s;
+    padding: 5px;
+}
+
+
 /* main navigation edition */
+
 .main_nav {
-	width: 100%;
-	
-	
+    width: 100%;
 }
+
 .main_nav >ul > li {
-	display: inline-flex;
-	margin: 2%;
-	padding: 10px;
-	transition: .9s;
+    display: inline-flex;
+    margin: 2%;
+    padding: 10px;
+    transition: .9s;
 }
+
 .main_nav >ul > li:first-of-type {
-	margin-left: 25%;
+    margin-left: 25%;
 }
-.main_nav >ul > li > a:hover{
-	font-size:  1.1em;
-	
-	
+
+.main_nav >ul > li > a:hover {
+    font-size: 1.1em;
 }
-.main_nav >ul > li:hover , .main_nav >ul > li >a:hover{
-	background-color: #cecece;
-	border-bottom: 1px solid #008197;
-	
+
+.main_nav >ul > li:hover,
+.main_nav >ul > li >a:hover {
+    background-color: #cecece;
+    border-bottom: 1px solid #008197;
 }
+
+
 /* fin main nav edition */
+
+
 /* TabContent part */
+
 ul.tab {
     list-style-type: none;
     margin: 0;
@@ -48,10 +56,16 @@ ul.tab {
     border-radius: 5px;
 }
 
+
 /* faire flotter la liste */
-ul.tab li {float: left;}
+
+ul.tab li {
+    float: left;
+}
+
 
 /* edition du li  */
+
 ul.tab li a {
     display: inline-block;
     color: white;
@@ -61,27 +75,35 @@ ul.tab li a {
     transition: 0.3s;
     font-size: 17px;
 }
+
 ul.tab li a:hover {
     background-color: white;
     color: black;
 }
-#croissiere,#hiver,#nature {
+
+#croissiere,
+#hiver,
+#nature {
     width: 70%;
     margin-left: 10%;
     border-radius: 5px;
-
 }
+
+
 /* table active */
-ul.tab li a:focus, .active {
+
+ul.tab li a:focus,
+.active {
     background-color: navy;
     border-radius: 5px;
 }
 
+
 /* Style the tab content */
+
 .tabcontent {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
 }
-.tabcontent
