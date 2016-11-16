@@ -65,6 +65,12 @@ ul.tab li a:hover {
     background-color: white;
     color: black;
 }
+#croissiere,#hiver,#nature {
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 5px;
+
+}
 /* table active */
 ul.tab li a:focus, .active {
     background-color: navy;
