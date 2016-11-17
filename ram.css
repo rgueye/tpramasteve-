@@ -1,0 +1,265 @@
+h2 {
+    color: #D24922;
+    font-size: 23px;
+    text-align: center;
+    /*font-size: 18px;
+	font-weight: normal;*/
+}
+h3,
+h1 {
+    text-align: center;
+    color: white;
+}
+form label {
+    font-size: 16px;
+}
+/*css du formulaire de rama*/
+
+body {
+    font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+    font-size: 62.5%;
+    color: red;
+
+    /*border-style: double;*/
+}
+form {
+    text-align: left;
+    font-size: 12px;
+}
+input, textarea, select {
+                         background: #fbfbfb;
+                         border: 1px solid #bebebe;
+                         color: #292929;
+                         font-size: 14px;
+                         padding: 10px;
+                         width: 200px;
+                         -moz-border-radius: 6px;
+                         border-radius: 6px;
+                         margin-bottom: 12px;
+    margin-left: 82px;
+}
+
+aside {
+    margin-top: -150px;
+}
+
+.ram {
+    margin-right: 420px;
+    margin-left: 587px;
+    margin-top: 27px;
+    margin-bottom: 58px;
+}
+
+
+form p {
+    clear: both;
+}
+.nom {
+   margin-left: 10px;
+}
+.prenom {
+    margin-left: -5px;
+}
+.courriel{
+     margin-left: 12px;
+ }
+.tel{
+    margin-left: -11px;
+}
+.adresse{
+    margin-left: -11px;
+}
+form input[type=radio] {
+}
+input.small {
+    width: 50px;
+}
+select {
+    width: 120px;
+}
+option {
+    margin: 6px;
+}
+.nav, .nav ul {
+    margin: 0;
+    background-color: white;
+    list-style: none;
+    left: 170px;
+    top: 99px;
+    width: 100%;
+    position: absolute;
+    /**/
+}
+.nav ul:link {color: black;}
+
+.lab1 {
+    margin-left: 281px;
+}
+
+.lab2 {
+   margin-left: 327px;
+}
+.lab3 {
+    margin-left: 344px;
+}
+.lab4 {
+    margin-left:260px;
+}
+.lab5 {
+    margin-left:266px;
+}
+.lab6 {
+    margin-left:134px;
+}
+.lab7 {
+    margin-left:145px;
+}
+.lab8 {
+    margin-left:81px;
+}
+#bouton1 {
+    margin-left:367px;
+}
+#datepicker {
+ color: red;
+}
+header {
+         background-color: darkcyan;
+         position: relative;
+}
+
+form button {
+             font-size: 14px;
+             text-transform: capitalize;
+             background: #cb3e52;
+             padding: 10px;
+             -webkit-border-radius: 8px;
+             -moz-border-radius: 8px;
+             border-radius: 8px;
+             border: none;
+             color: #fbfbfb
+}
+form button:hover {
+    background-color: #292929
+}
+form button:active {
+                 background-color: #292929;
+                 top: 2px;
+                 position: relative
+}
+.nav li:first-of-type {
+    /*background-image: url(img/menu-accueil.jpg);
+     margin-left: 360px;*/
+             background-position: left top;
+             display: inline-block;
+             margin-right: inherit;
+             float: left;
+
+}
+.nav li:first-of-type:hover {
+    background-color: greenyellow;
+    background-position: left top;
+    display: inline-block;
+    float: left;
+    background-position: left top;
+
+
+}
+.nav ul li:nth-of-type(2):hover {
+    background-color: greenyellow;
+    background-position: left top;
+    display: inline-block;
+    float: left;
+
+}
+.nav ul li:nth-of-type(3):hover {
+    background-color: greenyellow;
+    background-position: left top;
+    display: inline-block;
+    float: left;
+
+}
+.nav ul li:nth-of-type(4):hover {
+    background-color: greenyellow;
+    background-position: left top;
+    display: inline-block;
+    float: left;
+
+}
+.nav ul li:nth-of-type(5):hover {
+    background-color: greenyellow;
+    background-position: left top;
+    display: inline-block;
+    float: left;
+}
+.nav ul li:nth-of-type(6):hover {
+    background-color: greenyellow;
+    background-position: left top;
+    display: inline-block;
+    float: left;
+}
+.nav ul li:nth-of-type(2) {
+
+    background-position: left top;
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: inherit;
+    float: left;
+
+}
+li{
+    position: relative;
+    z-index: 20;
+    display: block;
+
+}
+
+.nav ul li:nth-of-type(3) {
+    background-position: left top;
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: inherit;
+    float: left;
+    color: darkcyan;
+
+}
+
+.nav ul li:nth-of-type(4) {
+    background-position: left top;
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: inherit;
+    float: left;
+}
+
+.nav ul li:nth-of-type(5) {
+
+    background-position: left top;
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: inherit;
+    float: left;
+    border-top: 10px;
+    border-right: 20px;
+}
+.nav ul li:nth-of-type(6) {
+
+    background-position: left top;
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: inherit;
+    float: left;
+    border-top: 10px;
+    border-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
