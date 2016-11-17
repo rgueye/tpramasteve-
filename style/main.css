@@ -78,9 +78,10 @@ ul.tab li a {
 #croissiere,
 #hiver,
 #nature {
-    width: 70%;
+    width: 78%;
     margin-left: 10%;
     border-radius: 5px;
+    transition: 2s;
 }
 
 
