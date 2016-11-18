@@ -13,3 +13,7 @@ function openForfait(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+//ajout du nom des forfaits
+$("#croissiere h3").html("");
+$("#hiver h3").html("");
+$("#nature h3").html("");
