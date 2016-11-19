@@ -1,5 +1,6 @@
 "use strict";
 /* tabContent part */
+var promo1 = P86_TP_forfaits[1]
 function openForfait(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -14,6 +15,8 @@ function openForfait(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 //ajout du nom des forfaits
-$("#croissiere h3").html("");
-$("#hiver h3").html("");
+$("#croissiere h3").html(P86_TP_forfaits[1].nom);
+$("#hiver h3").html(P86_TP_forfaits[3].nom);
 $("#nature h3").html("");
+$("#forfait_promo h3").html(P86_TP_forfaits[1].nom);
+$("#croissiere h3")
