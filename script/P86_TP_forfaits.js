@@ -8,7 +8,7 @@ var P86_TP_forfaits = [
     {
         nom: "L'atlantique emblématique",
         categorie: "Croisières",
-        description: "Le produit 1 bla bla bla...",
+        description: "Le quart environ des Canadiens habitent dans le bassin des Grands Lacs. Les lacs leur procurent de l'eau potable, des milieux récepteurs pour leurs eaux usées, de l'hydroélectricité et des possibilités d'activités récréatives. Le bassin des Grands Lacs est aussi le cadre d'un développement industriel, commercial, agricole et urbain considérable. Et il abrite un site panoramique emblématique à l'endroit où le lac Érié se déverse dans le lac Ontario : les chutes Niagara.",
         duree: 14,
         debut_saison: "2016-09-01",
         fin_saison: "2017-05-31",
@@ -66,7 +66,7 @@ var P86_TP_forfaits = [
     {
         nom: "Croisière des ours blancs",
         categorie: "Croisières",
-        description: "Le produit 1 bla bla bla...",
+        description: "Top Location Charlevoix offre les services complets de location de motoneige avec ou sans guide. Il est possible de louer une motoneige pour une période de 2 heures, d'une demi-journée, d'une journée complète ou de louer une motoneige pour plusieurs journées.Nous offrons également des forfaits motoneige et expéditions guidés conçus pour tous les types d'amateur de motoneige, que vous soyez des motoneigistes débutants ou même avancés.",
         duree: 12,
         debut_saison: "2016-05-01",
         fin_saison: "2016-11-30",
@@ -161,7 +161,7 @@ var P86_TP_forfaits = [
     {
         nom: "Le grand nord en hydravion",
         categorie: "Nature",
-        description: "Le produit 1 bla bla bla...",
+        description: "Au départ de Montréal, nolisez un hydravion pour la durée complète de votre voyage au Grand Nord québécois.   Un de nos pilotes de brousse d'expérience sera votre guide pour la durée du forfait dans le Grand Nord du Québec. Il vous mènera vers le 60e parallèle dans l'Ungava et le Labrador.",
         duree: 8,
         debut_saison: "2016-07-15",
         fin_saison: "2016-09-15",
