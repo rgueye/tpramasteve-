@@ -2,6 +2,7 @@
     font-family: 'Ubuntu Mono', monospace;
     text-decoration: none;
     /*	background-color: whitesmoke;*/
+    list-style: none;
 }
 
 a {
@@ -42,63 +43,58 @@ a {
 /* fin main nav edition */
 
 
-/* TabContent part */
-
-ul.tab {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: dodgerblue;
-    width: 80%;
-    margin-left: 10%;
-    border-radius: 5px;
+/*Tab content*/
+.tabs-menu {
+    height: 30px;
+    margin-left: 30%;
 }
 
-
-/* faire flotter la liste */
-
-ul.tab li {
+.tabs-menu li {
+    height: 30px;
+    line-height: 30px;
     float: left;
+    margin-right: 10px;
+    background-color: #ccc;
+    border-top: 1px solid #d4d4d1;
+    border-right: 1px solid #d4d4d1;
+    border-left: 1px solid #d4d4d1;
 }
 
+.tabs-menu li.current {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 5;
+}
 
-/* edition du li  */
-
-ul.tab li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+.tabs-menu li a {
+    padding: 10px;
+    text-transform: uppercase;
+    color: #fff;
     text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
-}
-#croissiere,
-#hiver,
-#nature {
-    width: 78%;
-    margin-left: 10%;
-    border-radius: 5px;
-    transition: 2s;
 }
 
-
-/* table active */
-
-ul.tab li a:focus,
-.active {
-    background-color: navy;
-    border-radius: 5px;
+.tabs-menu .current a {
+    color: #2e7da3;
 }
 
+.tab {
+    border: 1px solid #d4d4d1;
+    background-color: #fff;
+    margin-left: 5%;
+    width: 90%;
+}
 
-/* Style the tab content */
-
-.tabcontent {
+.tab-content {
+    width: 660px;
+    padding: 20px;
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+}
+
+#tab-1 {
+ display: block;
+}
+
+.nature{
+	width: 100%;
 }
