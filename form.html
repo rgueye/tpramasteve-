@@ -1,28 +1,22 @@
-<html>
-<head  lang="en">
-    <title> Formulaire </title>
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+    <title>Reservation</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="ram.css" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $( function() {
-            $( "#datepicker" ).datepicker();
-        } );
-    </script>
 </head>
+
 <body>
-<script src="form.js"></script>
+    <script src="form.js"></script>
 
 
-<form name="formulaire" action="" method="post" onSubmit="return verif_formulaire()">
-    <fieldset class="ram">
-<pre>
+    <form name="formulaire" action="" method="post" onSubmit="return verif_formulaire()">
+        <fieldset class="ram">
+            <pre>
     <h2 id="ramtitre">Acheter un billet</h2>
     <h3 id="ramsoustitre">Informations personnelles</h3>
  <label class="nom">Nom*:     <input type="text" size="25" name="nom" class="lab1"></label><br />
@@ -42,20 +36,27 @@
 
 
 
-    <div id="tableau">
-        <h4 class="recap"> Recapitulatif de votre forfait</h4>
+            <div id="tableau">
+                <h4 class="recap"> Recapitulatif de votre forfait</h4>
 
-    </div>
-<span>
+            </div>
+            <span>
 
 <label >
     <a href="go.html"><input type="submit" id="bouton1" value="Envoyer"></a>
     <input type="reset" id="bouton2"  value="Reinitialiser"></label>
 </span>
-    </fieldset>
+        </fieldset>
 
-</form>
+    </form>
 
-
+    <script>
+        $(function() {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
+
 </html>
