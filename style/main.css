@@ -100,21 +100,23 @@ a {
 }
 
 #croissiere,
-#nature,
-#sport_hiver {
+#nature{
     width: 50%;
     height: 20%;
     margin-left: 5%;
 }
-
+#sport_hiver{
+    width: 39%;
+}
 #tab-1 > h3,
-#tab-2 > h3 {
+#tab-2 > h3,
+#tab-3 > h3{
     color: white;
     margin-left: 40%;
 }
-
 #tab-1 > p,
-#tab-2 > p {
+#tab-2 > p,
+#tab-3 > p{
     margin-top: 0;
     padding: 5px;
     width: 36%;
@@ -122,6 +124,9 @@ a {
     float: right;
     margin-right: 8%;
     height: 385px;
+}
+#tab-3 > p{
+    margin-right: 24%;
 }
 /*edition description forfait*/
 .descriptionForfait{
@@ -141,5 +146,8 @@ a {
 }
 .descriptionForfait > li:nth-of-type(2){
     border-bottom: 1px solid #0071b3;
+}
+#tab-3 > .descriptionForfait {
+    margin-top: -6.4%;
 }
 /*fin edition descriptionForfait*/
