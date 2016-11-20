@@ -11,8 +11,4 @@ $(document).ready(function() {
     });
 });
 //ajout du nom des forfaits
-$("#croissiere h3").html(P86_TP_forfaits[1].nom);
-$("#hiver h3").html(P86_TP_forfaits[3].nom);
-$("#nature h3").html("");
 
-$("#croissiere h3")

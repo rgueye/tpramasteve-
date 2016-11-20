@@ -83,6 +83,7 @@ a {
     background-color: #fff;
     margin-left: 5%;
     width: 90%;
+    margin-top: -1.2%;
 }
 
 .tab-content {
@@ -97,4 +98,8 @@ a {
 
 .nature{
 	width: 100%;
+}
+#croissiere{
+    width: 50%;
+    height: 20%;
 }

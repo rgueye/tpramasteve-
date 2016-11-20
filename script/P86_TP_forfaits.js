@@ -40,8 +40,8 @@ var P86_TP_forfaits = [
         places_dispo: 105,
         nbr_max_animaux_admis: 2,
         prix_animal: 156,
-        photo: "images/images-modal/Banff_Parke.jpg",
-        photo_cat: "images/categorie/croisiere_01.jpg"
+        photo: "images/scandinave.jpg",
+        photo_cat: "images/scandinave.jpg"
     },
     {
         numero: 2,
@@ -235,4 +235,4 @@ var P86_TP_forfaits = [
         photo_cat: "images/categorie/iceberg_02.jpg"
     }
 ];
-$sanclsnewpsdjsm p
+
