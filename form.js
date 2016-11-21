@@ -2,6 +2,7 @@
  * Created by rgueye on 2015-11-27.
  */
 "use strict";
+//CODE JAVASCRIPT DU FORMULAIRE
 
 function verif_formulaire()
 {
@@ -53,12 +54,18 @@ function verif_formulaire()
         return false;
     }
 
-    if(document.formulaire.part.value == "")  {
+//code pour nombre de participants soit superieur ou egal a 1
+    var minimum = 0;
+    var number = parseInt();
+    for (var i = 0; i>= 1; i++)
+
+    if(document.formulaire.part.value == "0")  {
         alert("Veuillez inscrire le nombre de participants!");
         document.formulaire.part.focus();
         return false;
     }
 
+var prix = 100;
 
     if(document.formulaire.pet.value == "")  {
         alert("Veuillez inscrire le nombre d' animaux de compagnie!");
@@ -86,7 +93,80 @@ if (location.search) {
     }
 }
 
+//CODE JAVASCRIPT DU PANIER
 
 
+function LignePanier (code, qte, prix)
+{
+    this.codeArticle = code;
+    this.qteArticle = qte;
+    this.prixArticle = prix;
+    this.ajouterQte = function(qte)
+    {
+        this.qteArticle += qte;
+    }
+    this.getPrixLigne = function()
+    {
+        var resultat = this.prixArticle * this.qteArticle;
+        return resultat;
+    }
+    this.getCode = function()
+    {
+        return this.codeArticle;
+    }
+}
+
+function Panier()
+{
+    this.liste = [];
+    this.ajouterArticle = function(code, qte, prix)
+    {
+        var index = this.getArticle(code);
+        if (index == -1) this.liste.push(new LignePanier(code, qte, prix));
+        else this.liste[index].ajouterQte(qte);
+    }
+    this.getPrixPanier = function()
+    {
+        var total = 0;
+        for(var i = 0 ; i < this.liste.length ; i++)
+            total += this.liste[i].getPrixLigne();
+        return total;
+    }
+    this.getArticle = function(code)
+    {
+        for(var i = 0 ; i <this.liste.length ; i++)
+            if (code == this.liste[i].getCode()) return i;
+        return -1;
+    }
+    this.supprimerArticle = function(code)
+    {
+        var index = this.getArticle(code);
+        if (index > -1) this.liste.splice(index, 1);
+    }
+}
 
 
+$(document).ready(function() {
+    $(".tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+});
+//ajout du nom des forfaits
+$('#tab-1 p').text(P86_TP_forfaits[0].description);
+$('#tab-1 h3').text(P86_TP_forfaits[0].nom);
+$('#tab-2 p').text(P86_TP_forfaits[8].description);
+$('#tab-2 h3').text(P86_TP_forfaits[8].nom);
+$('#tab-3 p').text(P86_TP_forfaits[3].description);
+$('#tab-3 h3').text(P86_TP_forfaits[3].nom);
+$('.descriptionForfait li').first().text(P86_TP_forfaits[0].debut_saison);
+$('.descriptionForfait li:nth-child(2)').text(P86_TP_forfaits[0].mois_basse_saison);
+$('.descriptionForfait li:nth-child(3)').text('Prix du forfaits :' + ' '+ '$' +' '+ P86_TP_forfaits[0].prix_basse_saison);
+$('#tab-2 .descriptionForfait li').first().text(P86_TP_forfaits[8].debut_saison);
+$('#tab-2 .descriptionForfait li:nth-child(2)').text(P86_TP_forfaits[8].mois_basse_saison);
+$('#tab-2 .descriptionForfait li:nth-child(3)').text('Prix du forfaits :' + ' ' + '$'+' ' + P86_TP_forfaits[8].prix_basse_saison);
+//fin de l'ajout des forfait dans tab_content

@@ -1,62 +1,201 @@
-<!DOCTYPE html>
-<html lang="fr">
+<html>
+<head  lang="en">
+    <title> Formulaire </title>
 
-<head>
-    <title>Reservation</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="ram.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ram.css">
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker();
+        } );
+    </script>
 </head>
+<body >
+<script src="form.js"></script>
 
-<body>
-    <script src="form.js"></script>
+<form class="form"   name="formulaire" action="index.html" method="post" onSubmit="return verif_formulaire()">
 
+    <fieldset class="ram">
 
-    <form name="formulaire" action="" method="post" onSubmit="return verif_formulaire()">
-        <fieldset class="ram">
-            <pre>
+<pre>
     <h2 id="ramtitre">Acheter un billet</h2>
     <h3 id="ramsoustitre">Informations personnelles</h3>
- <label class="nom">Nom*:     <input type="text" size="25" name="nom" class="lab1"></label><br />
+ <label class="nom">Nom*:     <input type="text" size="25" name="nom" class="lab1">
+ </label><br />
   <label class="prenom"> Prenom*:
       <input type="text" size="25" name="prenom" class="lab2">
    </label><br />
 <label class="courriel">Courriel*:
-    <input type="text" size="25" name="courriel" class="lab3"></label><br />
-    <label class="tel">Telephone:  <input type="text" size="25" name="tel" class="lab4"></label><br />
-<label class="adresse">Adresse*:  <input type="text" size="25" name="lieu" class="lab5"></label><br />
+    <input type="text" size="25" name="courriel" class="lab3">
+</label><br />
+    <label class="tel">Telephone:  <input type="text" size="25" name="tel" class="lab4">
+    </label><br />
+<label class="adresse">Adresse*:  <input type="text" size="25" name="lieu" class="lab5">
+</label><br />
 
-<label class="debut">Date de debut du forfait*:<input type="text" name="date" size="25" id="datepicker"></label><br />
-<label class="par">Nombre de participants:  <input type="text" size="25" name="part" class="lab7"></label><br />
-   <label>Nombre d'animaux de compagnie:  <input type="text" size="25" name="pet" class="lab8"></label><br />
+<label class="debut">Date de debut du forfait*:<input type="text" name="date" size="25" id="datepicker">
+</label><br />
+<label class="par">Nombre de participants:  <input type="text" size="25" name="part" class="lab7">
+</label><br />
+   <label>Nombre d'animaux de compagnie:  <input type="text" size="25" name="pet" class="lab8">
+   </label><br />
 </pre>
 
-
-
-
-            <div id="tableau">
-                <h4 class="recap"> Recapitulatif de votre forfait</h4>
-
-            </div>
-            <span>
+<span>
 
 <label >
     <a href="go.html"><input type="submit" id="bouton1" value="Envoyer"></a>
     <input type="reset" id="bouton2"  value="Reinitialiser"></label>
 </span>
-        </fieldset>
+    </fieldset>
 
-    </form>
+</form>
 
-    <script>
-        $(function() {
-            $("#datepicker").datepicker();
-        });
-    </script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    var recap;
+    // Lire information dans prompt
+
+    console.log("Confirmation: (",recap,")");
+</script>
+
+
+
+
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="panier.js"></script>
+<script type="text/javascript">
+
+
+    //CODE DU PANIER  JAVASCRIPT ET HTML INCLUS
+
+
+
+
+    function ajouter()
+    {
+        var code = parseInt(document.getElementById("id").value);
+        var qte = parseInt(document.getElementById("qte").value);
+        var prix = parseInt(document.getElementById("prix").value);
+        var monPanier = new Panier();
+        monPanier.ajouterArticle(code, qte, prix);
+        var tableau = document.getElementById("tableau");
+        var longueurTab = parseInt(document.getElementById("nbreLignes").innerHTML);
+        if (longueurTab > 0)
+        {
+            for(var i = longueurTab ; i > 0  ; i--)
+            {
+                monPanier.ajouterArticle(parseInt(tableau.rows[i].cells[0].innerHTML), parseInt(tableau.rows[i].cells[1].innerHTML), parseInt(tableau.rows[i].cells[2].innerHTML));
+                tableau.deleteRow(i);
+            }
+        }
+        var longueur = monPanier.liste.length;
+        for(var i = 0 ; i < longueur ; i++)
+        {
+            var ligne = monPanier.liste[i];
+            var ligneTableau = tableau.insertRow(-1);
+            var colonne1 = ligneTableau.insertCell(0);
+            colonne1.innerHTML += ligne.getCode();
+            var colonne2 = ligneTableau.insertCell(1);
+            colonne2.innerHTML += ligne.qteArticle;
+            var colonne3 = ligneTableau.insertCell(2);
+            colonne3.innerHTML += ligne.prixArticle;
+            var colonne4 = ligneTableau.insertCell(3);
+            colonne4.innerHTML += ligne.getPrixLigne();
+            var colonne5 = ligneTableau.insertCell(4);
+            colonne5.innerHTML += "<button class=\"btn btn-primary\" type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
+        }
+        document.getElementById("prixTotal").innerHTML = monPanier.getPrixPanier();
+        document.getElementById("nbreLignes").innerHTML = longueur;
+    }
+
+    function supprimer(code)
+    {
+        var monPanier = new Panier();
+        var tableau = document.getElementById("tableau");
+        var longueurTab = parseInt(document.getElementById("nbreLignes").innerHTML);
+        if (longueurTab > 0)
+        {
+            for(var i = longueurTab ; i > 0  ; i--)
+            {
+                monPanier.ajouterArticle(parseInt(tableau.rows[i].cells[0].innerHTML), parseInt(tableau.rows[i].cells[1].innerHTML), parseInt(tableau.rows[i].cells[2].innerHTML));
+                tableau.deleteRow(i);
+            }
+        }
+        monPanier.supprimerArticle(code);
+        var longueur = monPanier.liste.length;
+        for(var i = 0 ; i < longueur ; i++)
+        {
+            var ligne = monPanier.liste[i];
+            var ligneTableau = tableau.insertRow(-1);
+            var colonne1 = ligneTableau.insertCell(0);
+            colonne1.innerHTML += ligne.getCode();
+            var colonne2 = ligneTableau.insertCell(1);
+            colonne2.innerHTML += ligne.qteArticle;
+            var colonne3 = ligneTableau.insertCell(2);
+            colonne3.innerHTML += ligne.prixArticle;
+            var colonne4 = ligneTableau.insertCell(3);
+            colonne4.innerHTML += ligne.getPrixLigne();
+            var colonne5 = ligneTableau.insertCell(4);
+            colonne5.innerHTML += "<button class=\"btn btn-primary\" type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
+        }
+        document.getElementById("prixTotal").innerHTML = monPanier.getPrixPanier();
+        document.getElementById("nbreLignes").innerHTML = longueur;
+    }
+</script>
+</head>
+
+<section  class="container">
+    <article class="well form-inline pull-left col-lg-5">
+        <legend>Gestion du panier</legend>
+        <label class="col-lg-3">Options</label> :
+        <input type = "number" id = "id" style="width:120px" ><br><br>
+        <label class="col-lg-3" >Quantité</label> :
+        <input type = "number" id = "qte" style="width:120px">
+        <br><br>
+        <label class="col-lg-3">Prix Unitaire</label> :
+        <input type = "number" id = "prix" style="width:120px"><br>
+        <br>
+        <button class="btn btn-primary" type="submit" onclick="ajouter()">
+            Reserver</button>
+    </article>
+</section>
+<section class="container">
+    <article class="well form-inline pull-left col-lg-5">
+        <legend>Contenu du panier</legend>
+        <table id="tableau" class="table">
+            <thead>
+            <tr>
+                <th>Code</th>
+                <th>Qte</th>
+                <th>Prix unitaire</th>
+                <th>Supprimer</th>
+            </tr>
+            </thead>
+        </table>
+        <br><label>Prix du forfait total</label> : <label id = "prixTotal"></label>
+        <label id = "nbreLignes" hidden>0</label>
+    </article>
+</section>
+<div id="toutou">
+    <img src="images/croisiere-navire.jpg" width="210" height="230" class="toutou" />
+</div>
+
+
+
+
+
+
+
+
+
 </body>
-
 </html>
